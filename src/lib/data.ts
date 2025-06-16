@@ -1,12 +1,21 @@
 export const personalInfo = {
-  name: "Rishikesh S",
-  location: "Coimbatore, India",
-  email: "rkesh2003@gmail.com",
-  github: "https://github.com/rishikesh2003",
-  linkedin: "https://www.linkedin.com/in/rishikeshs/",
+  name: "Brandon Jose Tenorio Noguera",
+  location: "DMV-Baltimore area, U.S.A.",
+  email: "bjtn_website@bjtn.me",
+  github: "https://github.com/bjtn1",
+  linkedin: "https://www.linkedin.com/in/brandon-jose-tenorio-noguera/",
 };
 
 export const workExperience = [
+  {
+    company: "Teamania",
+    location: "MD, U.S.A.",
+    position: "Supervisor",
+    period: "March 2019 - Present",
+    achievements: [
+      "nah",
+    ],
+  },
   {
     company: "Chatbyte GmbH",
     location: "Remote",
