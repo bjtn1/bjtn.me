@@ -122,15 +122,11 @@ export default function HeroSection() {
           <div className="bg-gradient-to-r from-blue-500/10 to-blue-500/10 backdrop-blur-sm backdrop-filter p-4 rounded-lg border border-blue-500/20 dark:border-blue-500/10 shadow-sm">
             <p className="text-muted-foreground pl-4 py-2 mb-4 relative">
               <span className="absolute left-0 top-0 h-full w-1 bg-gradient-to-b from-blue-500 blue-pink-500 rounded-full"></span>
-              🚀 Passionate software engineer with a versatile skill set
-              spanning multiple domains. I thrive on solving complex challenges
-              across different platforms and environments, adapting quickly to
-              new technologies and methodologies. My holistic approach combines
-              technical expertise with creative problem-solving, allowing me to
-              develop solutions that are both innovative and practical. I'm
-              driven by continuous learning and a commitment to excellence,
-              whether working independently or collaborating with diverse teams
-              to create impactful, scalable solutions.
+              Hi!
+
+              I’m Brandon Jose Tenorio Noguera, computer science graduate from the University of Maryland, Baltimore County.
+
+              My interests concern Privacy, Data Recovery, Cybersecurity, Data Management, and Machine Learning.
             </p>
           </div>
         </MotionWrapper>
