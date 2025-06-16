@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Download, FileText, FileSpreadsheet } from "lucide-react";
+import { FileText } from "lucide-react"; // Removed Download import
 import MotionWrapper from "./MotionWrapper";
 import { useEffect, useState } from "react";
 
@@ -47,25 +47,14 @@ function formatDate(date: Date): string {
 
 export default function ResumeSection() {
   const [standardResumeInfo, setStandardResumeInfo] = useState<FileInfo | null>(null);
-  /* Uncomment these when adding extended resume
-  const [extendedResumeInfo, setExtendedResumeInfo] = useState<FileInfo | null>(null);
-  */
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
     const fetchFileInfo = async () => {
       setIsLoading(true);
       try {
-        const [standard /*, extended */] = await Promise.all([
-          getFileInfo('/BrandonJose_TenorioNoguera_Resume.pdf'),
-          /* Uncomment when adding extended resume
-          getFileInfo('/BrandonJose_TenorioNoguera_Resume_Extended.pdf')
-          */
-        ]);
+        const standard = await getFileInfo('/BrandonJose_TenorioNoguera_Resume.pdf');
         setStandardResumeInfo(standard);
-        /* Uncomment when adding extended resume
-        setExtendedResumeInfo(extended);
-        */
       } catch (error) {
         console.error('Error loading resume info:', error);
       } finally {
@@ -85,7 +74,7 @@ export default function ResumeSection() {
               resume
             </h2>
           </MotionWrapper>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div className="grid grid-cols-1 gap-6">
             <MotionWrapper>
               <div className="border rounded-lg p-6 flex flex-col h-full min-h-[300px] animate-pulse">
                 <div className="h-6 w-6 bg-gray-200 dark:bg-gray-700 rounded mb-4"></div>
@@ -94,16 +83,6 @@ export default function ResumeSection() {
                 <div className="h-3 bg-gray-200 dark:bg-gray-700 rounded w-5/6 mb-4"></div>
               </div>
             </MotionWrapper>
-            {/* Uncomment when adding extended resume
-            <MotionWrapper delay={0.1}>
-              <div className="border rounded-lg p-6 flex flex-col h-full min-h-[300px] animate-pulse">
-                <div className="h-6 w-6 bg-gray-200 dark:bg-gray-700 rounded mb-4"></div>
-                <div className="h-4 bg-gray-200 dark:bg-gray-700 rounded w-3/4 mb-4"></div>
-                <div className="h-3 bg-gray-200 dark:bg-gray-700 rounded w-full mb-2"></div>
-                <div className="h-3 bg-gray-200 dark:bg-gray-700 rounded w-5/6 mb-4"></div>
-              </div>
-            </MotionWrapper>
-            */}
           </div>
         </div>
       </section>
@@ -120,113 +99,40 @@ export default function ResumeSection() {
         </MotionWrapper>
 
         <div className="grid grid-cols-1 gap-6">
-          {/* Standard Resume */}
+          {/* Standard Resume - Entire card is clickable */}
           <MotionWrapper>
-            <motion.div 
-              className="border rounded-lg p-6 hover:border-blue-500/30 transition-colors flex flex-col h-full min-h-[300px]"
+            <motion.a
+              href="/BrandonJose_TenorioNoguera_Resume.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="block h-full"
               whileHover={{ y: -5 }}
             >
-              <div className="flex items-center gap-3 mb-4">
-                <FileText className="h-6 w-6 text-blue-500" />
-                <h3 className="text-lg font-medium">standard version</h3>
-              </div>
-              <div className="flex-grow">
-                <p className="text-muted-foreground text-sm mb-4">
-                  Concise 1-page resume with key highlights
-                </p>
-                {standardResumeInfo && (
-                  <p className="text-xs text-muted-foreground mb-4">
-                    Last updated: {formatDate(standardResumeInfo.lastUpdated)}
-                  </p>
-                )}
-              </div>
-              <div>
-                <div className="flex gap-3">
-                  <motion.a
-                    href="/BrandonJose_TenorioNoguera_Resume.pdf"
-                    download
-                    className="inline-flex items-center gap-2 px-4 py-2 text-sm bg-blue-500/10 hover:bg-blue-500/20 rounded-md transition-colors"
-                    whileHover={{ scale: 1.03 }}
-                    whileTap={{ scale: 0.97 }}
-                  >
-                    <Download className="h-4 w-4" />
-                    download
-                  </motion.a>
-                  <motion.a
-                    href="/BrandonJose_TenorioNoguera_Resume.pdf"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 px-4 py-2 text-sm bg-transparent hover:bg-blue-500/5 rounded-md transition-colors"
-                    whileHover={{ scale: 1.03 }}
-                    whileTap={{ scale: 0.97 }}
-                  >
-                    <FileText className="h-4 w-4" />
-                    preview
-                  </motion.a>
+              <div className="border rounded-lg p-6 hover:border-blue-500/30 transition-colors flex flex-col h-full min-h-[300px] cursor-pointer">
+                <div className="flex items-center gap-3 mb-4">
+                  <FileText className="h-6 w-6 text-blue-500" />
+                  <h3 className="text-lg font-medium">resume</h3>
                 </div>
-                {standardResumeInfo && (
-                  <p className="text-xs text-muted-foreground mt-2">
-                    PDF • {standardResumeInfo.fileSize}
+                <div className="flex-grow">
+                  <p className="text-muted-foreground text-sm mb-4">
+                    Concise 1-page resume with key highlights (click to preview!)
                   </p>
-                )}
-              </div>
-            </motion.div>
-          </MotionWrapper>
-
-          {/* Extended Resume - Uncomment this block to enable */}
-          {/*
-          <MotionWrapper delay={0.1}>
-            <motion.div 
-              className="border rounded-lg p-6 hover:border-blue-500/30 transition-colors flex flex-col h-full min-h-[300px]"
-              whileHover={{ y: -5 }}
-            >
-              <div className="flex items-center gap-3 mb-4">
-                <FileSpreadsheet className="h-6 w-6 text-blue-500" />
-                <h3 className="text-lg font-medium">extended version</h3>
-              </div>
-              <div className="flex-grow">
-                <p className="text-muted-foreground text-sm mb-4">
-                  Detailed resume with all projects and experiences
-                </p>
-                {extendedResumeInfo && (
-                  <p className="text-xs text-muted-foreground mb-4">
-                    Last updated: {formatDate(extendedResumeInfo.lastUpdated)}
-                  </p>
-                )}
-              </div>
-              <div>
-                <div className="flex gap-3">
-                  <motion.a
-                    href="/BrandonJose_TenorioNoguera_Resume_Extended.pdf"
-                    download
-                    className="inline-flex items-center gap-2 px-4 py-2 text-sm bg-blue-500/10 hover:bg-blue-500/20 rounded-md transition-colors"
-                    whileHover={{ scale: 1.03 }}
-                    whileTap={{ scale: 0.97 }}
-                  >
-                    <Download className="h-4 w-4" />
-                    download
-                  </motion.a>
-                  <motion.a
-                    href="/BrandonJose_TenorioNoguera_Resume_Extended.pdf"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 px-4 py-2 text-sm bg-transparent hover:bg-blue-500/5 rounded-md transition-colors"
-                    whileHover={{ scale: 1.03 }}
-                    whileTap={{ scale: 0.97 }}
-                  >
-                    <FileText className="h-4 w-4" />
-                    preview
-                  </motion.a>
+                  {standardResumeInfo && (
+                    <p className="text-xs text-muted-foreground mb-4">
+                      Last updated: {formatDate(standardResumeInfo.lastUpdated)}
+                    </p>
+                  )}
                 </div>
-                {extendedResumeInfo && (
-                  <p className="text-xs text-muted-foreground mt-2">
-                    PDF • {extendedResumeInfo.fileSize}
-                  </p>
-                )}
+                <div className="mt-auto">
+                  {standardResumeInfo && (
+                    <p className="text-xs text-muted-foreground">
+                      PDF • {standardResumeInfo.fileSize}
+                    </p>
+                  )}
+                </div>
               </div>
-            </motion.div>
+            </motion.a>
           </MotionWrapper>
-          */}
         </div>
       </div>
     </section>
