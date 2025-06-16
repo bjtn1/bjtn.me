@@ -14,6 +14,11 @@ export const workExperience = [
     period: "March 2019 - Present",
     achievements: [
       "- Led a team of 5 to optimize closing procedures, cutting down closing time by 25% through workflow restructuring.",
+      "- Maintained and built relationships with 50+ customers daily",
+      "- Provided exceptional customer service and efficient product deliveries",
+      "- Ensured utmost customer satisfaction which resulted in an increase in tips by 100%",
+      "- Demonstrated strong organizational skills in managing multiple tasks efficiently in a fast-paced environment",
+      "- Managed and trained a team of 5 people to carry out efficient, effective, and satisfactory customer service resulting in reviews averaging a 4-star rating on sites like Yelp and Google reviews",
     ],
   },
   {
@@ -22,7 +27,9 @@ export const workExperience = [
     position: "Research Lab Aide",
     period: "August 2023 - December 2023",
     achievements: [
-      "- Collaborated closely with 6 graduate students to understand research needs and provide effective support"
+      "- Collaborated closely with 6 graduate students to understand research needs and provide effective support",
+      "- Safely handled and managed dangerous chemicals within a research laboratory environment",
+      "- Thoroughly maintained a clean workspace with equipment in accordance to laboratory standards to prevent contamination",
     ],
   },
 ];
@@ -150,54 +157,54 @@ export const projects = [
   },
 ];
 
-export const awards = [
-  {
-    name: "IEEE YESIST12 Hackathon",
-    issuer: "IEEE",
-    date: "Sep 2022",
-    type: "International",
-    position: "Second Place",
-  },
-  {
-    name: "Prodigi Cognizant Hackathon",
-    issuer: "Cognizant",
-    date: "Feb 2023",
-    type: "National",
-    position: "Second Runner-up",
-  },
-  {
-    name: "Cisco Thingqbator Hackathon",
-    issuer: "Cisco",
-    date: "Jan 2023",
-    type: "National",
-    position: "First Runner-up",
-  },
-  {
-    name: "Innovators Day",
-    issuer: "Sri Manakula Vinayagar Engineering College, Pondicherry",
-    date: "Sep 2022",
-    type: "National",
-    position: "First Prize",
-  },
-  {
-    name: "KG Hackfest'22",
-    issuer: "KGiSL Institute of Technology, Coimbatore",
-    date: "Sep 2022",
-    type: "National",
-    position: "Second Prize",
-  },
-  {
-    name: "Innohacks'22",
-    issuer: "Innogeeks, KIET Group of Institutions, New Delhi",
-    date: "May 2022",
-    type: "National",
-    position: "Second Runner-up",
-  },
-  {
-    name: "Hack @ SKCET",
-    issuer: "Hackclub SKCET, SKCET, Coimbatore",
-    date: "Feb 2022",
-    type: "National",
-    position: "Most Impactful Hack",
-  },
-];
+// export const awards = [
+//   {
+//     name: "IEEE YESIST12 Hackathon",
+//     issuer: "IEEE",
+//     date: "Sep 2022",
+//     type: "International",
+//     position: "Second Place",
+//   },
+//   {
+//     name: "Prodigi Cognizant Hackathon",
+//     issuer: "Cognizant",
+//     date: "Feb 2023",
+//     type: "National",
+//     position: "Second Runner-up",
+//   },
+//   {
+//     name: "Cisco Thingqbator Hackathon",
+//     issuer: "Cisco",
+//     date: "Jan 2023",
+//     type: "National",
+//     position: "First Runner-up",
+//   },
+//   {
+//     name: "Innovators Day",
+//     issuer: "Sri Manakula Vinayagar Engineering College, Pondicherry",
+//     date: "Sep 2022",
+//     type: "National",
+//     position: "First Prize",
+//   },
+//   {
+//     name: "KG Hackfest'22",
+//     issuer: "KGiSL Institute of Technology, Coimbatore",
+//     date: "Sep 2022",
+//     type: "National",
+//     position: "Second Prize",
+//   },
+//   {
+//     name: "Innohacks'22",
+//     issuer: "Innogeeks, KIET Group of Institutions, New Delhi",
+//     date: "May 2022",
+//     type: "National",
+//     position: "Second Runner-up",
+//   },
+//   {
+//     name: "Hack @ SKCET",
+//     issuer: "Hackclub SKCET, SKCET, Coimbatore",
+//     date: "Feb 2022",
+//     type: "National",
+//     position: "Most Impactful Hack",
+//   },
+// ];
