@@ -34,7 +34,7 @@ export default function ProjectsSection() {
                 whileTap={{ scale: 0.98 }}
               >
                 <GlassCard className="group overflow-hidden dark:border-blue-500/10 h-full flex flex-col cursor-pointer">
-                  <CardHeader className="bg-gradient-to-r from-blue-500/5 to-pink-500/5">
+                  <CardHeader className="bg-gradient-to-r from-blue-500/5 to-blue-500/5">
                     <CardTitle className="text-center md:text-left group-hover:text-blue-500 transition-colors duration-300">
                       {project.title}
                     </CardTitle>
@@ -55,7 +55,7 @@ export default function ProjectsSection() {
                       ))}
                     </ul>
                   </CardContent>
-                  <CardFooter className="flex justify-center md:justify-start items-center border-t border-border/30 bg-gradient-to-r from-blue-500/5 to-pink-500/5">
+                  <CardFooter className="flex justify-center md:justify-start items-center border-t border-border/30 bg-gradient-to-r from-blue-500/5 to-blue-500/5">
                     <div className="flex items-center text-sm text-muted-foreground group-hover:text-blue-500 transition-colors pt-8">
                       <Github className="h-4 w-4 mr-2 group-hover:rotate-12 transition-transform duration-300" />
                       View on GitHub
