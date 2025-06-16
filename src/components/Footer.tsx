@@ -25,31 +25,21 @@ export default function Footer() {
             whileInView={{ opacity: 1 }}
             transition={{ delay: 0.2, duration: 0.5 }}
             viewport={{ once: true }}
-            whileHover={{ scale: 1.01 }}
           >
             Built with{" "}
-            <motion.span
-              className="inline-block"
-              initial={{ rotate: 0 }}
-              whileHover={{ rotate: 360 }}
-              transition={{ duration: 0.5 }}
-            >
-              💻
-            </motion.span>{" "}
-            and{" "}
-            <motion.span
-              className="inline-block"
-              animate={{
-                scale: [1, 1.2, 1],
-              }}
-              transition={{
-                repeat: Infinity,
-                repeatType: "reverse",
-                duration: 1.5,
+            <motion.a 
+              href="https://astro.build" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="text-muted-foreground hover:text-foreground transition-colors"
+              initial={false}
+              whileHover={{ 
+                scale: 1.05, 
+                color: "#4b5563" // This is the gray-600 color from your HeroSection
               }}
             >
-              ❤️
-            </motion.span>
+              Astro
+            </motion.a>{" "}
           </motion.p>
         </motion.div>
       </div>

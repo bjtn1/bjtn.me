@@ -37,7 +37,6 @@ export default function GlassHeader() {
                 {item === "experience"}
                 {item === "skills"}
                 {item === "projects"}
-                {item === "awards"}
                 {item === "education"}
                 {item.charAt(0).toUpperCase() + item.slice(1)}
               </motion.a>
@@ -82,11 +81,11 @@ export default function GlassHeader() {
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ duration: 0.2, delay: index * 0.1 }}
                   >
-                    {item === "experience" && "💼 "}
-                    {item === "skills" && "🛠️ "}
-                    {item === "projects" && "🚀 "}
-                    {item === "awards" && "🏆 "}
-                    {item === "education" && "🎓 "}
+                    {item === "experience"}
+                    {item === "skills"}
+                    {item === "projects"}
+                    {item === "awards"}
+                    {item === "education"}
                     {item.charAt(0).toUpperCase() + item.slice(1)}
                   </motion.a>
                 )
