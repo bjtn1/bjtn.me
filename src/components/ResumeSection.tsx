@@ -10,20 +10,20 @@ interface FileInfo {
 
 async function getFileInfo(path: string): Promise<FileInfo> {
   try {
-    const response = await fetch(path);
+    const response = await fetch(path, { cache: 'no-store' });
     if (!response.ok) throw new Error('File not found');
     
     const lastModified = response.headers.get('last-modified');
     const contentLength = response.headers.get('content-length');
     
     return {
-      lastUpdated: lastModified ? new Date(lastModified) : new Date(),
+      lastUpdated: lastModified ? new Date(lastModified) : new Date(NaN), // Invalid date if no last-modified header
       fileSize: contentLength ? formatFileSize(parseInt(contentLength)) : 'N/A'
     };
   } catch (error) {
     console.error('Error fetching file info:', error);
     return {
-      lastUpdated: new Date(),
+      lastUpdated: new Date(NaN), // Invalid date
       fileSize: 'N/A'
     };
   }
@@ -36,6 +36,10 @@ function formatFileSize(bytes: number): string {
 }
 
 function formatDate(date: Date): string {
+  // Return epoch timestamp if date is invalid or file doesn't exist
+  if (isNaN(date.getTime())) {
+    return Math.floor(Date.now() / 1000).toString();
+  }
   const year = date.getFullYear();
   const month = String(date.getMonth() + 1).padStart(2, '0');
   const day = String(date.getDate()).padStart(2, '0');
@@ -53,7 +57,7 @@ export default function ResumeSection() {
       try {
         const [standard, extended] = await Promise.all([
           getFileInfo('/BrandonJose_TenorioNoguera_Resume.pdf'),
-          getFileInfo('/resume-extended.pdf')
+          getFileInfo('/BrandonJose_TenorioNoguera_Resume_Extended.pdf')
         ]);
         setStandardResumeInfo(standard);
         setExtendedResumeInfo(extended);
@@ -179,7 +183,7 @@ export default function ResumeSection() {
               <div>
                 <div className="flex gap-3">
                   <motion.a
-                    href="/resume-extended.pdf"
+                    href="/BrandonJose_TenorioNoguera_Resume_Extended.pdf"
                     download
                     className="inline-flex items-center gap-2 px-4 py-2 text-sm bg-blue-500/10 hover:bg-blue-500/20 rounded-md transition-colors"
                     whileHover={{ scale: 1.03 }}
@@ -189,7 +193,7 @@ export default function ResumeSection() {
                     download
                   </motion.a>
                   <motion.a
-                    href="/resume-extended.pdf"
+                    href="/BrandonJose_TenorioNoguera_Resume_Extended.pdf"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="inline-flex items-center gap-2 px-4 py-2 text-sm bg-transparent hover:bg-blue-500/5 rounded-md transition-colors"
