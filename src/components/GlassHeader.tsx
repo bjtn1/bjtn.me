@@ -24,7 +24,7 @@ export default function GlassHeader() {
 
         {/* Desktop Navigation */}
         <nav className="hidden md:flex items-center space-x-6 text-sm font-medium">
-          {["resume", "experience", "skills", "projects", "education"].map(
+          {["resume", "projects", "skills", "education", "experience"].map(
             (item, index) => (
               <motion.a
                 key={item}
@@ -67,7 +67,7 @@ export default function GlassHeader() {
             transition={{ duration: 0.3 }}
           >
             <nav className="flex flex-col space-y-4 text-sm font-medium">
-              {["resume", "experience", "skills", "projects", "education"].map(
+              {["resume", "projects", "skills", "education", "experience"].map(
                 (item, index) => (
                   <motion.a
                     key={item}
