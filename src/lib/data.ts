@@ -122,6 +122,28 @@ export const projects = [
       "Built with React, Supabase, Node.js, Flask, and Solidity, showcasing seamless integration of health tech and blockchain.",
     ],
   },
+  {
+    title: "Mental Aarog",
+    github: "https://github.com/rishikesh2003/mental-aarog",
+    description: [
+      "A holistic mental health app leveraging AI and blockchain for early detection and personalized solutions for depression.",
+      "Features include social media analysis (ML-based sentiment tracking), PHQ-9 assessments, smartwatch integration for sleep and activity data, guided meditation, and smart suggestions for food, travel, music, and movies.",
+      "Developed a rewards system using MAG crypto token on Ethereum, enabling user engagement through in-app incentives.",
+      "Secure storage implemented via web3.storage, IPFS, and FileCoin.",
+      "Built with React, Supabase, Node.js, Flask, and Solidity, showcasing seamless integration of health tech and blockchain.",
+    ],
+  },
+  {
+    title: "Mental Aarog",
+    github: "https://github.com/rishikesh2003/mental-aarog",
+    description: [
+      "A holistic mental health app leveraging AI and blockchain for early detection and personalized solutions for depression.",
+      "Features include social media analysis (ML-based sentiment tracking), PHQ-9 assessments, smartwatch integration for sleep and activity data, guided meditation, and smart suggestions for food, travel, music, and movies.",
+      "Developed a rewards system using MAG crypto token on Ethereum, enabling user engagement through in-app incentives.",
+      "Secure storage implemented via web3.storage, IPFS, and FileCoin.",
+      "Built with React, Supabase, Node.js, Flask, and Solidity, showcasing seamless integration of health tech and blockchain.",
+    ],
+  },
 ];
 
 export const awards = [
