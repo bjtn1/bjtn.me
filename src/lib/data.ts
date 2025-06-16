@@ -9,72 +9,75 @@ export const personalInfo = {
 export const workExperience = [
   {
     company: "Teamania",
-    location: "MD, U.S.A.",
+    location: "Rockville, MD",
     position: "Supervisor",
     period: "March 2019 - Present",
     achievements: [
-      "nah",
+      "- Led a team of 5 to optimize closing procedures, cutting down closing time by 25% through workflow restructuring.",
     ],
   },
   {
-    company: "Chatbyte GmbH",
-    location: "Remote",
-    position: "Software Engineer",
-    period: "Mar 2024 - Present",
+    company: "Biology Department of the University of Maryland - Baltimore County",
+    location: "Catonsville, MD",
+    position: "Research Lab Aide",
+    period: "August 2023 - December 2023",
     achievements: [
-      "Designed and implemented business logic for AWS Lambdas using the Serverless Framework, forming the backbone of the application's functionality and ensuring seamless backend operations.",
-      "Built a comprehensive admin panel for managing content, user data, and analytics.",
-      "Contributed to the development and integration of a scalable CMS for managing blog content and other platform data.",
-      "Reduced database costs by introducing materialized views, optimizing query performance and resource usage.",
-      "Drove the integration of a custom affiliate marketing system, enabling seamless tracking and reporting of referrals and user activities.",
-      "Integrated Text-to-Speech (TTS) services for enhanced user experiences, optimizing both frontend and backend systems.",
-      "Collaborated with cross-functional teams to deliver high-quality features, actively reviewing pull requests to ensure code quality, adherence to standards, and efficient implementation.",
-    ],
-  },
-  {
-    company: "DevCrew",
-    location: "Coimbatore, India",
-    position: "Software Engineer",
-    period: "Mar 2023 - Mar 2024",
-    achievements: [
-      "Developed responsive frontend components using React.js, enhancing user experience and app performance.",
-      "Optimized JavaScript solutions to improve load times and data-fetching efficiency.",
-    ],
-  },
-  {
-    company: "Phoenitags",
-    location: "Coimbatore, India",
-    position: "Software Engineering Intern",
-    period: "Jan 2023 - Mar 2023",
-    achievements: [
-      "Built interactive UIs with React.js, focusing on reusable components and performance optimization.",
-      "Implemented JavaScript-based features like user authentication and real-time updates.",
+      "- Collaborated closely with 6 graduate students to understand research needs and provide effective support"
     ],
   },
 ];
 
 export const education = [
   {
-    institution: "Sri Krishna College of Engineering and Technology",
-    location: "Coimbatore, India",
-    degree: "B Tech Information Technology",
-    period: "Jun 2021 - Jun 2025",
+    institution: "University of Maryland - Baltimore County",
+    location: "Maryland, U.S.A.",
+    degree: "Bachelor of Science in Computer Science",
+    period: "May 2022 - December 2024",
     achievements: [
-      "President of the Department of Information Technology",
-      "G20 student delegate",
-      "Organized multiple technical workshops and events",
-      "Represented my college in multiple national and international hackathons and won.",
+      "- CMSC 304: Social & Ethical Issues in Information Technology",
+      "- CMSC 421: Principles of Operating Systems",
+      "- CMSC 491: Special Topics in Computer Science - Social and Crowd Computing",
+      "- CMSC 441: Design & Analysis of Algorithms",
+      "- CMSC 447: Software Engineering I",
+      "- CMSC 471: Artificial Intelligence",
+      "- CMSC 478: Introduction to Machine Learning",
+      "- STAT 355: Probability & Statistics for Science & Engineering",
+      "- CMSC 426: Principles of Computer Security",
+      "- MATH 221: Introduction to Linear Algebra",
+      "- CMSC 341: Data Structures",
+      "- CMSC 340: Advanced C++",
+      "- CMSC 331: Principles of Programming Languages",
+      "- CMSC 313: Compute Organization & Assembly Programming",
+      "- CMSC 411: Computer Architecture",
+      "- CMSC 449: Malware Analysis",
+      "- BIOL 142: Foundations of Biology",
+      "- SOCY 101: Basic Concepts in Sociology",
+    ],
+  },
+  {
+    institution: "Montgomery College",
+    location: "Maryland, U.S.A.",
+    degree: "Associate of Arts in Computer Science",
+    period: "August 2018 - May 2022",
+    achievements: [
+      "- CMSC 140: Introduction to Programming",
+      "- MATH 181: Calculus I",
+      "- MATH 182: Calculus II",
+      "- MATH 280: Multivariable Calculus",
+      "- CMSC 140: Introduction to Programming",
+      "- CMSC 203: Computer Science I",
+      "- CMSC 204: Computer Science II",
+      "- CMSC 207: Introduction to Discrete Structures",
     ],
   },
 ];
 export const skills = {
   programmingLanguages: [
-    "TypeScript",
     "JavaScript",
     "Python",
     "C++",
+    "C",
     "Java",
-    "Solidity",
   ],
   frontendDevelopment: [
     "Nextjs",
@@ -103,6 +106,7 @@ export const projects = [
   {
     title: "Net Zero Carbon Emissions",
     github: "https://github.com/rishikesh2003/Prodigi",
+    demoUrl: "https://bjtn.me",
     description: [
       "WiFi-RTT: Developed indoor occupancy tracking for energy optimization.",
       "IoT Solutions: Implemented smart monitoring for energy efficiency and food waste reduction.",
