@@ -33,7 +33,7 @@ export default function EducationSection() {
 
               {edu.achievements && edu.achievements.length > 0 && (
                 <motion.div
-                  className="mt-3 p-4 bg-background/80 backdrop-blur-sm backdrop-filter rounded-lg border border-blue-500/20 dark:bg-card/10 dark:border-blue-500/10 shadow-sm"
+                  className="mt-3 p-4 bg-background/80 backdrop-blur-sm backdrop-filter rounded-lg border-blue-500/20 dark:bg-card/10 dark:border-blue-500/10 shadow-sm"
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: 0.2 }}
@@ -44,7 +44,7 @@ export default function EducationSection() {
                       <Award className="h-4 w-4 text-blue-500" />
                     </div>
                     <h4 className="text-sm font-medium">
-                      Achievements & Activities
+                      coursework
                     </h4>
                   </div>
                   <ul className="list-none ml-4 space-y-2 text-sm">
