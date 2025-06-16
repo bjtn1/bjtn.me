@@ -18,7 +18,8 @@ export default function GlassHeader() {
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
         >
-          {personalInfo.name}
+          Brandon J. T. Noguera
+          {/*personalInfo.name*/}
         </motion.a>
 
         {/* Desktop Navigation */}
