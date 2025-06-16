@@ -17,13 +17,13 @@ async function getFileInfo(path: string): Promise<FileInfo> {
     const contentLength = response.headers.get('content-length');
     
     return {
-      lastUpdated: lastModified ? new Date(lastModified) : new Date(NaN), // Invalid date if no last-modified header
+      lastUpdated: lastModified ? new Date(lastModified) : new Date(NaN),
       fileSize: contentLength ? formatFileSize(parseInt(contentLength)) : 'N/A'
     };
   } catch (error) {
     console.error('Error fetching file info:', error);
     return {
-      lastUpdated: new Date(NaN), // Invalid date
+      lastUpdated: new Date(NaN),
       fileSize: 'N/A'
     };
   }
@@ -36,7 +36,6 @@ function formatFileSize(bytes: number): string {
 }
 
 function formatDate(date: Date): string {
-  // Return epoch timestamp if date is invalid or file doesn't exist
   if (isNaN(date.getTime())) {
     return Math.floor(Date.now() / 1000).toString();
   }
@@ -48,19 +47,25 @@ function formatDate(date: Date): string {
 
 export default function ResumeSection() {
   const [standardResumeInfo, setStandardResumeInfo] = useState<FileInfo | null>(null);
+  /* Uncomment these when adding extended resume
   const [extendedResumeInfo, setExtendedResumeInfo] = useState<FileInfo | null>(null);
+  */
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
     const fetchFileInfo = async () => {
       setIsLoading(true);
       try {
-        const [standard, extended] = await Promise.all([
+        const [standard /*, extended */] = await Promise.all([
           getFileInfo('/BrandonJose_TenorioNoguera_Resume.pdf'),
+          /* Uncomment when adding extended resume
           getFileInfo('/BrandonJose_TenorioNoguera_Resume_Extended.pdf')
+          */
         ]);
         setStandardResumeInfo(standard);
+        /* Uncomment when adding extended resume
         setExtendedResumeInfo(extended);
+        */
       } catch (error) {
         console.error('Error loading resume info:', error);
       } finally {
@@ -81,16 +86,24 @@ export default function ResumeSection() {
             </h2>
           </MotionWrapper>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {[...Array(2)].map((_, index) => (
-              <MotionWrapper key={index} delay={index * 0.1}>
-                <div className="border rounded-lg p-6 flex flex-col h-full min-h-[300px] animate-pulse">
-                  <div className="h-6 w-6 bg-gray-200 dark:bg-gray-700 rounded mb-4"></div>
-                  <div className="h-4 bg-gray-200 dark:bg-gray-700 rounded w-3/4 mb-4"></div>
-                  <div className="h-3 bg-gray-200 dark:bg-gray-700 rounded w-full mb-2"></div>
-                  <div className="h-3 bg-gray-200 dark:bg-gray-700 rounded w-5/6 mb-4"></div>
-                </div>
-              </MotionWrapper>
-            ))}
+            <MotionWrapper>
+              <div className="border rounded-lg p-6 flex flex-col h-full min-h-[300px] animate-pulse">
+                <div className="h-6 w-6 bg-gray-200 dark:bg-gray-700 rounded mb-4"></div>
+                <div className="h-4 bg-gray-200 dark:bg-gray-700 rounded w-3/4 mb-4"></div>
+                <div className="h-3 bg-gray-200 dark:bg-gray-700 rounded w-full mb-2"></div>
+                <div className="h-3 bg-gray-200 dark:bg-gray-700 rounded w-5/6 mb-4"></div>
+              </div>
+            </MotionWrapper>
+            {/* Uncomment when adding extended resume
+            <MotionWrapper delay={0.1}>
+              <div className="border rounded-lg p-6 flex flex-col h-full min-h-[300px] animate-pulse">
+                <div className="h-6 w-6 bg-gray-200 dark:bg-gray-700 rounded mb-4"></div>
+                <div className="h-4 bg-gray-200 dark:bg-gray-700 rounded w-3/4 mb-4"></div>
+                <div className="h-3 bg-gray-200 dark:bg-gray-700 rounded w-full mb-2"></div>
+                <div className="h-3 bg-gray-200 dark:bg-gray-700 rounded w-5/6 mb-4"></div>
+              </div>
+            </MotionWrapper>
+            */}
           </div>
         </div>
       </section>
@@ -106,7 +119,7 @@ export default function ResumeSection() {
           </h2>
         </MotionWrapper>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div className="grid grid-cols-1 gap-6">
           {/* Standard Resume */}
           <MotionWrapper>
             <motion.div 
@@ -160,7 +173,8 @@ export default function ResumeSection() {
             </motion.div>
           </MotionWrapper>
 
-          {/* Extended Resume */}
+          {/* Extended Resume - Uncomment this block to enable */}
+          {/*
           <MotionWrapper delay={0.1}>
             <motion.div 
               className="border rounded-lg p-6 hover:border-blue-500/30 transition-colors flex flex-col h-full min-h-[300px]"
@@ -212,6 +226,7 @@ export default function ResumeSection() {
               </div>
             </motion.div>
           </MotionWrapper>
+          */}
         </div>
       </div>
     </section>
