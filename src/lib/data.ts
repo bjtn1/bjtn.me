@@ -133,11 +133,11 @@ export const skills = {
 };
 
 export const projects = [
-  // TODO
   {
     title: "PoGoCal",
     github: "https://github.com/bjtn1/pogocal",
     demoUrl: "",
+    technologies: ["Python", "Google Calendar API", "Web Scraping", "Selenium"],
     description: [
       "Automatically syncs Pokémon GO events from LeekDuck to your Google Calendar",
       "A Python tool that scrapes and schedules Pokémon GO events in your calendar",
@@ -149,6 +149,7 @@ export const projects = [
   {
     title: "doopie",
     github: "https://github.com/bjtn1/doopie",
+    technologies: ["Python", "CLI", "File System", "SHA-256 Hashing"],
     description: [
       "A Python tool for finding and managing duplicate files in directories",
       "CLI utility that identifies duplicate files using SHA-256 hashing",
@@ -160,6 +161,7 @@ export const projects = [
   {
     title: "al",
     github: "https://github.com/bjtn1/al",
+    technologies: ["Python", "File Organization", "Duplicate Detection", "CLI"],
     description: [
       "A Python file organizer that groups files by extension and identifies duplicates",
       "Command-line tool for automatically organizing files into extension-based folders",
@@ -172,6 +174,7 @@ export const projects = [
     title: "Etch-a-Sketch",
     github: "https://github.com/bjtn1/etch-a-sketch",
     demoUrl: "https://bjtn1.github.io/etch-a-sketch/",
+    technologies: ["JavaScript", "HTML5", "CSS3", "Interactive Web App"],
     description: [
       "A browser-based drawing application inspired by the classic Etch-a-Sketch toy",
       "Interactive web drawing tool with customizable grid sizes and color selection",
@@ -183,7 +186,8 @@ export const projects = [
   {
     title: "Simple Pokémon",
     github: "https://github.com/bjtn1/simple-pokemon",
-    demoUlr: "https://bjtn1.github.io/simple-pokemon/",
+    demoUrl: "https://bjtn1.github.io/simple-pokemon/",
+    technologies: ["JavaScript", "Game Development", "Type Matchups", "Web App"],
     description: [
       "A web-based Pokémon type advantage simulator with first-to-5 scoring",
       "Interactive game that tests knowledge of Pokémon type effectiveness",
@@ -195,6 +199,7 @@ export const projects = [
   {
     title: "NSplitter",
     github: "https://github.com/bjtn1/nsplitter",
+    technologies: ["Python", "File Processing", "CLI", "Large Files"],
     description: [
       "A Python tool for splitting large files into 4GB chunks and merging them back",
       "Command-line utility for handling files larger than FAT32's 4GB limit",
@@ -206,6 +211,7 @@ export const projects = [
   {
     title: "Chess Engine",
     github: "https://github.com/bjtn1/chess",
+    technologies: ["C", "Bitboards", "Magic Bitboards", "Algorithm Optimization"],
     description: [
       "A C-based chess engine with bitboard representation and magic bitboards",
       "Low-level chess implementation using bitwise operations for move generation",
@@ -217,6 +223,7 @@ export const projects = [
   {
     title: "Kernel Mailbox System",
     github: "https://github.com/bjtn1/mailbox",
+    technologies: ["Linux Kernel", "C", "System Calls", "Binary Search Trees"],
     description: [
       "A Linux kernel module implementing a mailbox messaging system using BST and queues",
       "Kernel-level message queue system with thread-safe operations and syscall interface",
@@ -228,14 +235,15 @@ export const projects = [
   {
     title: "task-cli",
     github: "https://github.com/bjtn1/task-cli",
+    technologies: ["Python", "JSON", "CLI", "Productivity Tools"],
     description: [
-        "A Python command-line task manager with JSON storage and CRUD operations",
-        "Simple CLI tool for tracking tasks with status updates and timestamps",
-        "Local task management system with add, update, delete and mark functionality",
-        "Lightweight todo list manager with persistent JSON storage",
-        "Command-line productivity tool for organizing personal tasks"
+      "A Python command-line task manager with JSON storage and CRUD operations",
+      "Simple CLI tool for tracking tasks with status updates and timestamps",
+      "Local task management system with add, update, delete and mark functionality",
+      "Lightweight todo list manager with persistent JSON storage",
+      "Command-line productivity tool for organizing personal tasks"
     ]
-  },
+  }
 ];
 
 // export const awards = [

@@ -45,7 +45,6 @@ const skillCategoryVariants = {
 };
 
 export default function SkillsSection() {
-{/* TODO revamp this to my liking */}
   return (
     <section
       id="skills"

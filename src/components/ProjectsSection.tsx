@@ -31,6 +31,24 @@ export default function ProjectsSection() {
                   </CardTitle>
                 </CardHeader>
                 <CardContent className="flex-grow p-6">
+                  {/* Technology Tags - Only render if technologies exist */}
+                  {project.technologies && project.technologies.length > 0 && (
+                    <div className="flex flex-wrap gap-2 mb-4">
+                      {project.technologies.map((tech, i) => (
+                        <motion.span
+                          key={i}
+                          className="text-xs px-2 py-1 rounded-full bg-blue-500/10 text-blue-500 dark:text-blue-400"
+                          initial={{ opacity: 0, scale: 0.8 }}
+                          whileInView={{ opacity: 1, scale: 1 }}
+                          transition={{ delay: i * 0.05 }}
+                          viewport={{ once: true }}
+                        >
+                          {tech}
+                        </motion.span>
+                      ))}
+                    </div>
+                  )}
+                  
                   <ul className="list-disc space-y-2 text-sm pl-4">
                     {project.description.map((desc, i) => (
                       <motion.li
