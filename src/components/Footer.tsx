@@ -28,7 +28,7 @@ export default function Footer() {
           >
             Built with{" "}
             <motion.a 
-              href="https://astro.build" 
+              href="https://astro.build/themes/details/modern-developer-portfolio-template/" 
               target="_blank" 
               rel="noopener noreferrer"
               className="text-muted-foreground hover:text-foreground transition-colors"
