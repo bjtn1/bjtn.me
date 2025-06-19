@@ -157,6 +157,74 @@ export const projects = [
       "Command-line tool to scan directories for duplicate files with progress tracking"
     ],
   },
+  {
+    title: "al",
+    github: "https://github.com/bjtn1/al",
+    description: [
+      "A Python file organizer that groups files by extension and identifies duplicates",
+      "Command-line tool for automatically organizing files into extension-based folders",
+      "MacOS utility for structuring directories by file type with duplicate detection",
+      "File management system that categorizes files and handles duplicates using SHA-256",
+      "Automated directory organizer with verbose tree-view output and duplicate handling"
+    ],
+  },
+  {
+    title: "Etch-a-Sketch",
+    github: "https://github.com/bjtn1/etch-a-sketch",
+    demoUrl: "https://bjtn1.github.io/etch-a-sketch/",
+    description: [
+      "A browser-based drawing application inspired by the classic Etch-a-Sketch toy",
+      "Interactive web drawing tool with customizable grid sizes and color selection",
+      "JavaScript drawing canvas with eraser and grid customization features",
+      "Modern web implementation of the classic Etch-a-Sketch with responsive design",
+      "Pixel art creator with dynamic grid resizing and real-time color changing"
+    ],
+  },
+  {
+    title: "Simple Pokémon",
+    github: "https://github.com/bjtn1/simple-pokemon",
+    demoUlr: "https://bjtn1.github.io/simple-pokemon/",
+    description: [
+      "A web-based Pokémon type advantage simulator with first-to-5 scoring",
+      "Interactive game that tests knowledge of Pokémon type effectiveness",
+      "JavaScript implementation of Pokémon's type matchup system with 18 types",
+      "Player vs computer battle game using official Pokémon type effectiveness charts",
+      "Educational tool for learning Pokémon type matchups through gameplay"
+    ],
+  },
+  {
+    title: "NSplitter",
+    github: "https://github.com/bjtn1/nsplitter",
+    description: [
+      "A Python tool for splitting large files into 4GB chunks and merging them back",
+      "Command-line utility for handling files larger than FAT32's 4GB limit",
+      "File archiving solution with split/merge capabilities for storage limitations",
+      "Python implementation for splitting and reassembling large files with progress tracking",
+      "Flexible file processor that breaks down and reconstructs files across size boundaries"
+    ],
+  },
+  {
+    title: "Chess Engine",
+    github: "https://github.com/bjtn1/chess",
+    description: [
+      "A C-based chess engine with bitboard representation and magic bitboards",
+      "Low-level chess implementation using bitwise operations for move generation",
+      "Bitboard chess engine with FEN parsing and advanced move generation",
+      "Chess programming project featuring magic bitboards for sliding piece attacks",
+      "Educational chess engine demonstrating bitboard techniques and board representation"
+    ],
+  },
+  {
+    title: "Kernel Mailbox System",
+    github: "https://github.com/bjtn1/mailbox",
+    description: [
+      "A Linux kernel module implementing a mailbox messaging system using BST and queues",
+      "Kernel-level message queue system with thread-safe operations and syscall interface",
+      "Linux kernel message passing system with FIFO queues organized in a binary search tree",
+      "In-kernel mailbox service providing inter-process communication via system calls",
+      "Efficient kernel-space message queue implementation with UID-based mailbox management"
+    ],
+  },
 ];
 
 // export const awards = [
