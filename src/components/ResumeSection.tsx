@@ -24,7 +24,9 @@ export default function ResumeSection() {
               <div className="border rounded-lg p-6 hover:border-blue-500/30 transition-colors flex flex-col h-full min-h-[300px] cursor-pointer">
                 <div className="flex items-center gap-3 mb-4">
                   <FileText className="h-6 w-6 text-blue-500" />
-                  <h3 className="text-lg font-medium">BrandonJose_TenorioNoguera_Resume.pdf</h3>
+                  <h3 className="text-lg font-medium truncate">
+                    BrandonJose_TenorioNoguera_Resume.pdf
+                  </h3>
                 </div>
                 <div className="flex-grow">
                   <p className="text-muted-foreground text-sm mb-4">
