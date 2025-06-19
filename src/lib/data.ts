@@ -139,11 +139,11 @@ export const projects = [
     demoUrl: "",
     technologies: ["Python", "Google Calendar API", "Web Scraping", "Selenium"],
     description: [
-      "Automatically syncs Pokémon GO events from LeekDuck to your Google Calendar",
-      "A Python tool that scrapes and schedules Pokémon GO events in your calendar",
-      "Keep track of Pokémon GO events automatically with this calendar integration",
-      "Never miss a Pokémon GO event again with automated calendar updates",
-      "Web scraper and calendar integration for Pokémon GO event scheduling"
+      "Automates synchronization of Pokémon GO events to your personal Google Calendar",
+      "Scrapes event data from LeekDuck using Selenium webdriver",
+      "Handles rate limiting and API quotas gracefully",
+      "Supports custom timezone configuration for accurate event scheduling",
+      "Self-contained Docker container for easy deployment"
     ],
   },
   {
@@ -151,11 +151,11 @@ export const projects = [
     github: "https://github.com/bjtn1/doopie",
     technologies: ["Python", "CLI", "File System", "SHA-256 Hashing"],
     description: [
-      "A Python tool for finding and managing duplicate files in directories",
-      "CLI utility that identifies duplicate files using SHA-256 hashing",
-      "Efficient duplicate file detector with customizable ignore patterns",
-      "File system analyzer that finds duplicate files and calculates storage impact",
-      "Command-line tool to scan directories for duplicate files with progress tracking"
+      "Identifies duplicate files by comparing SHA-256 checksums",
+      "Recursive directory scanning with configurable depth",
+      "Interactive mode for selective file deletion",
+      "Generates comprehensive report of duplicate files",
+      "Preserves file permissions during operations"
     ],
   },
   {
@@ -163,11 +163,11 @@ export const projects = [
     github: "https://github.com/bjtn1/al",
     technologies: ["Python", "File Organization", "Duplicate Detection", "CLI"],
     description: [
-      "A Python file organizer that groups files by extension and identifies duplicates",
-      "Command-line tool for automatically organizing files into extension-based folders",
-      "MacOS utility for structuring directories by file type with duplicate detection",
-      "File management system that categorizes files and handles duplicates using SHA-256",
-      "Automated directory organizer with verbose tree-view output and duplicate handling"
+      "Organizes files into folders based on their extensions",
+      "Visual tree output shows file movements before execution",
+      "Dry-run mode for testing configuration",
+      "Handles naming conflicts automatically",
+      "Preserves original file timestamps"
     ],
   },
   {
@@ -176,11 +176,11 @@ export const projects = [
     demoUrl: "https://bjtn1.github.io/etch-a-sketch/",
     technologies: ["JavaScript", "HTML5", "CSS3", "Interactive Web App"],
     description: [
-      "A browser-based drawing application inspired by the classic Etch-a-Sketch toy",
-      "Interactive web drawing tool with customizable grid sizes and color selection",
-      "JavaScript drawing canvas with eraser and grid customization features",
-      "Modern web implementation of the classic Etch-a-Sketch with responsive design",
-      "Pixel art creator with dynamic grid resizing and real-time color changing"
+      "Responsive canvas that works on mobile and desktop",
+      "Color picker with hex code display",
+      "Dynamic grid resizing without page reload",
+      "Eraser tool with adjustable size",
+      "Local storage for saving favorite colors"
     ],
   },
   {
@@ -189,11 +189,11 @@ export const projects = [
     demoUrl: "https://bjtn1.github.io/simple-pokemon/",
     technologies: ["JavaScript", "Game Development", "Type Matchups", "Web App"],
     description: [
-      "A web-based Pokémon type advantage simulator with first-to-5 scoring",
-      "Interactive game that tests knowledge of Pokémon type effectiveness",
-      "JavaScript implementation of Pokémon's type matchup system with 18 types",
-      "Player vs computer battle game using official Pokémon type effectiveness charts",
-      "Educational tool for learning Pokémon type matchups through gameplay"
+      "Implements official Pokémon type effectiveness chart",
+      "First-to-5 scoring system with win tracking",
+      "Computer opponent with random type selection",
+      "Mobile-friendly responsive design",
+      "Visual indicators for super-effective/not-very-effective moves"
     ],
   },
   {
@@ -201,11 +201,11 @@ export const projects = [
     github: "https://github.com/bjtn1/nsplitter",
     technologies: ["Python", "File Processing", "CLI", "Large Files"],
     description: [
-      "A Python tool for splitting large files into 4GB chunks and merging them back",
-      "Command-line utility for handling files larger than FAT32's 4GB limit",
-      "File archiving solution with split/merge capabilities for storage limitations",
-      "Python implementation for splitting and reassembling large files with progress tracking",
-      "Flexible file processor that breaks down and reconstructs files across size boundaries"
+      "Splits files into 4GB chunks for FAT32 compatibility",
+      "Merge function reconstructs original files perfectly",
+      "Progress indicators for large file operations",
+      "Checksum verification for data integrity",
+      "Resume capability for interrupted transfers"
     ],
   },
   {
@@ -213,11 +213,11 @@ export const projects = [
     github: "https://github.com/bjtn1/chess",
     technologies: ["C", "Bitboards", "Magic Bitboards", "Algorithm Optimization"],
     description: [
-      "A C-based chess engine with bitboard representation and magic bitboards",
-      "Low-level chess implementation using bitwise operations for move generation",
-      "Bitboard chess engine with FEN parsing and advanced move generation",
-      "Chess programming project featuring magic bitboards for sliding piece attacks",
-      "Educational chess engine demonstrating bitboard techniques and board representation"
+      "Implements magic bitboards for efficient sliding piece move generation",
+      "Supports standard algebraic notation (SAN) for moves",
+      "Perft testing for move generation validation",
+      "Bitwise operations for maximum performance",
+      "Text-based UI with move history"
     ],
   },
   {
@@ -225,11 +225,11 @@ export const projects = [
     github: "https://github.com/bjtn1/mailbox",
     technologies: ["Linux Kernel", "C", "System Calls", "Binary Search Trees"],
     description: [
-      "A Linux kernel module implementing a mailbox messaging system using BST and queues",
-      "Kernel-level message queue system with thread-safe operations and syscall interface",
-      "Linux kernel message passing system with FIFO queues organized in a binary search tree",
-      "In-kernel mailbox service providing inter-process communication via system calls",
-      "Efficient kernel-space message queue implementation with UID-based mailbox management"
+      "Implements character device driver for message passing",
+      "BST-based mailbox organization by UID",
+      "Thread-safe queue operations with mutex locks",
+      "Syscall interface for user-space interaction",
+      "Memory-efficient message storage"
     ],
   },
   {
@@ -237,11 +237,11 @@ export const projects = [
     github: "https://github.com/bjtn1/task-cli",
     technologies: ["Python", "JSON", "CLI", "Productivity Tools"],
     description: [
-      "A Python command-line task manager with JSON storage and CRUD operations",
-      "Simple CLI tool for tracking tasks with status updates and timestamps",
-      "Local task management system with add, update, delete and mark functionality",
-      "Lightweight todo list manager with persistent JSON storage",
-      "Command-line productivity tool for organizing personal tasks"
+      "Color-coded status indicators for tasks",
+      "Natural language date parsing for due dates",
+      "Tag system for task organization",
+      "JSON schema validation for data integrity",
+      "Interactive mode for quick task management"
     ]
   }
 ];
