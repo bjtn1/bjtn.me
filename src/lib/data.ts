@@ -225,6 +225,17 @@ export const projects = [
       "Efficient kernel-space message queue implementation with UID-based mailbox management"
     ],
   },
+  {
+    title: "task-cli",
+    github: "https://github.com/bjtn1/task-cli",
+    description: [
+        "A Python command-line task manager with JSON storage and CRUD operations",
+        "Simple CLI tool for tracking tasks with status updates and timestamps",
+        "Local task management system with add, update, delete and mark functionality",
+        "Lightweight todo list manager with persistent JSON storage",
+        "Command-line productivity tool for organizing personal tasks"
+    ]
+  },
 ];
 
 // export const awards = [
